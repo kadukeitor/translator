@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="Translator">
+<head>
+    <meta charset="utf-8">
+    <title>Translator</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="lib/angular-busy/dist/angular-busy.min.css"/>
+
+    <link rel="stylesheet" href="css/translator.min.css"/>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="color: #ffffff"><i class="fa fa-copy"></i> TRANSLATOR
+                <small style="font-size: 14px;"></small>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+        </div>
+    </div>
+</nav>
+
+<div ng-view></div>
+
+<div class="footer">
+    <div class="container">
+        <p class="text-muted lead" style="color:white;">
+            Created with &lt;3 by <a href="https://twitter.com/kadukeitor">@kadukeitor</a>
+        </p>
+    </div>
+</div>
+
+
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-route/angular-route.min.js"></script>
+<script src="lib/angular-busy/dist/angular-busy.min.js"></script>
+
+<script src="js/translator.min.js"></script>
+
+</body>
+</html>

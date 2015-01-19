@@ -1,0 +1,6 @@
+!.gitkeep
+client/node_modules/
+client/bower_components/
+.DS_Store
+.idea
+UCLV.md
