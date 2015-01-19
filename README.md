@@ -23,3 +23,18 @@ $ pip install -r requirements.txt
 ```
 $ python gapi.py --jid=USER@gmail.com --password=PASSWORD
 ```
+
+## Client
+
+You can use the project packed in *dist* or you can build:
+
+On the client directory
+
+```
+$ grunt
+```
+
+For test
+```
+$ grunt serve
+```
