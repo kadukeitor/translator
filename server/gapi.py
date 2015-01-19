@@ -5,7 +5,7 @@ import time
 import logging
 import getpass
 from optparse import OptionParser
-from bson.json_util import dumps
+from json import dumps
 from flask import request, Flask, Response
 from flask.ext.cors import CORS
 import sleekxmpp
