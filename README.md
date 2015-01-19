@@ -1,8 +1,10 @@
 # Translator
 
-Web Translator
+Simple Translator based on sleekxmpp and Google's bots.
 
 ## Installation
+
+Need install the server ( API ) and the client ( website )
 
 ### Client
 
