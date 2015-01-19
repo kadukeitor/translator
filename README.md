@@ -2,6 +2,10 @@
 
 Simple Translator based on sleekxmpp and Google's bots.
 
+## Demo
+
+http://translator.mlbot.net
+
 ## Installation
 
 Need install the server ( API ) and the client ( website )
