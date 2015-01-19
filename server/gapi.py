@@ -6,9 +6,12 @@ import logging
 import getpass
 from optparse import OptionParser
 from json import dumps
+import ssl
+
 from flask import request, Flask, Response
 from flask.ext.cors import CORS
 import sleekxmpp
+from sleekxmpp.xmlstream import cert
 
 
 app = Flask(__name__)
@@ -16,12 +19,22 @@ CORS(app)
 
 # app.debug = True
 
+
 class GTMsgBot(sleekxmpp.ClientXMPP):
     def __init__(self, jid, password):
         sleekxmpp.ClientXMPP.__init__(self, jid, password)
 
         self.add_event_handler("session_start", self.start)
         self.add_event_handler("message", self.message)
+        self.add_event_handler("ssl_invalid_cert", self.invalid_cert)
+
+    def invalid_cert(self, pem_cert):
+        der_cert = ssl.PEM_cert_to_DER_cert(pem_cert)
+        try:
+            cert.verify('talk.google.com', der_cert)
+            logging.debug("CERT: Found GTalk certificate")
+        except cert.CertificateError as err:
+            self.disconnect(send_close=False)
 
     def start(self, event):
         self.send_presence()
