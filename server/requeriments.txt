@@ -1,3 +1,6 @@
 Flask
 flask-cors
 sleekxmpp
+bson
+pyasn1
+pyasn1_modules
