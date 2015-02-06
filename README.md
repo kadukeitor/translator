@@ -2,9 +2,7 @@
 
 Simple Translator based on sleekxmpp and Google's bots.
 
-## Demo
-
-http://translator.mlbot.net
+![Alt text](screenshot.png?raw=true "Translator")
 
 ## Installation
 
